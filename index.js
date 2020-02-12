@@ -15,9 +15,9 @@ var startFunc = async () => {
 
     txns = txns.filter((txn) => { return parseInt(decodeTags(txn)["Version"]) >= window.EARLIEST_VERSION; })
 
-    var puzzlesReady = await asyncFilter(txns, async (txn) => { return (await arweave.wallets.getBalance(txn.target)) > 1 })
+    var puzzlesReady = await asyncFilter(txns, async (txn) => { return (await arweave.wallets.getBalance(txn.target)) > 100000 })
 
-    var puzzlesCompleted = await asyncFilter(txns, async (txn) => { return (await arweave.wallets.getBalance(txn.target)) < 1 })
+    var puzzlesCompleted = await asyncFilter(txns, async (txn) => { return (await arweave.wallets.getBalance(txn.target)) < 100000 })
  
     puzzlesReady = puzzlesReady.map((txn) => {
         var tags = decodeTags(txn)

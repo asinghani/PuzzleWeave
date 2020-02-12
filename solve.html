@@ -20,26 +20,30 @@
         <div class="container" style="padding-top: 20px;">
             <div class="row">
                 <div class="col-md" style="margin-right: 30px;">
-                    <h3 style="padding-bottom: 10px;" id="puzzle_title">Puzzle Title</h3>
-                    <b>Reward: <span id="puzzle_reward">0.5</span> AR</b>
+                    <a href="index.html">Back</a>
+                    <h4 style="padding-bottom: 10px;" id="puzzle_title"></h4>
+                    <b>Reward: <span id="puzzle_reward"></span> AR</b>
                     <br> <br>
-                    <p id="puzzle_content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elementum tellus, sed dictum dolor euismod sed. Etiam fermentum diam vel tellus maximus porta. Aliquam et nisl in nunc fermentum dapibus sit amet vel est. Nulla facilisi. Cras ornare nisl et elit posuere gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi dictum in nibh vel euismod. Sed commodo finibus sapien vel condimentum. Aenean rhoncus finibus nunc semper volutpat. Nunc quis lectus ornare, aliquet lectus sit amet, gravida augue. Nullam viverra, enim a congue convallis, orci lacus rutrum mauris, id vestibulum justo diam ac est. Aliquam ac porttitor nisi, posuere elementum tortor. Vivamus gravida, diam id rutrum maximus, sem neque dapibus nunc, at viverra est eros sed ex. Etiam odio orci, vulputate a accumsan sit amet, rutrum in arcu. Pellentesque ultricies mi facilisis ultrices hendrerit. In at congue mi, sed lobortis enim.
-                    </p>
+                    <p id="puzzle_content"></p>
                 </div>
 
                 <div class="col-md" style="margin-left: 30px;">
                     <h4 style="padding-bottom: 10px; padding-top: 25px;">Solve Puzzle</h4>
-                    <p>The solution to this puzzle is a <span id="char_count">N</span>-character alphanumeric string that is not case-sensitive.</p>
+                    <p>The solution to this puzzle is an alphanumeric string that is not case-sensitive.</p>
                     <br>
                     <b>Enter Solution:</b>
                     <input class="form-control" id="puzzle_solution" style="margin-bottom: 10px">
 
-                    <b>Upload Wallet File</b> <input type="file" id="keyfile" style="margin-bottom: 10px" />
+                    <b>Upload Wallet File (no coin will be spent, it will only be used to allow you to recieve the reward)</b>
+                    <input type="file" id="keyfile" style="margin-bottom: 10px" />
 
-                    <button type="button" class="btn btn-primary btn-sm btn-block">Submit Solution</button>
+                    <button type="button" onclick="submitSolution()" class="btn btn-primary btn-sm btn-block">Submit Solution</button>
                 </div>
             </div>
         </div>
+
+
+        <script src="utils.js"></script>
+        <script src="solve.js"></script>
     </body>
 </html>

@@ -24,7 +24,7 @@ var submitPuzzle = async () => {
     if(title.length < 1 || title.length > 100) { alert("Please input a valid title (max 100 chars)"); return; }
 
     var reward = arweave.ar.arToWinston($("#reward_input").val().trim())
-    if(reward < 100) { alert("Please input a valid reward"); return; }
+    if(reward < 10000000) { alert("Please input a valid reward (minimum 10,000,000 winston)"); return; }
 
     var details = $("#description_input").val().trim()
     if(details.length < 5) { alert("Please input a valid puzzle"); return; }
