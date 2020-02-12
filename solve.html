@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="bootstrap.min.css">
+
+        <script src="jquery-3.4.1.slim.min.js"></script>
+        <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="https://unpkg.com/arweave/bundles/web.bundle.min.js"></script>
+        <script src="sha256.min.js"></script>
+        <script src="aes.js"></script>
+
+        <title>PuzzleWeave</title>
+
+    </head>
+    <body>
+        <div class="container" style="padding-top: 20px;">
+            <div class="row">
+                <div class="col-md" style="margin-right: 30px;">
+                    <h3 style="padding-bottom: 10px;" id="puzzle_title">Puzzle Title</h3>
+                    <b>Reward: <span id="puzzle_reward">0.5</span> AR</b>
+                    <br> <br>
+                    <p id="puzzle_content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum elementum tellus, sed dictum dolor euismod sed. Etiam fermentum diam vel tellus maximus porta. Aliquam et nisl in nunc fermentum dapibus sit amet vel est. Nulla facilisi. Cras ornare nisl et elit posuere gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi dictum in nibh vel euismod. Sed commodo finibus sapien vel condimentum. Aenean rhoncus finibus nunc semper volutpat. Nunc quis lectus ornare, aliquet lectus sit amet, gravida augue. Nullam viverra, enim a congue convallis, orci lacus rutrum mauris, id vestibulum justo diam ac est. Aliquam ac porttitor nisi, posuere elementum tortor. Vivamus gravida, diam id rutrum maximus, sem neque dapibus nunc, at viverra est eros sed ex. Etiam odio orci, vulputate a accumsan sit amet, rutrum in arcu. Pellentesque ultricies mi facilisis ultrices hendrerit. In at congue mi, sed lobortis enim.
+                    </p>
+                </div>
+
+                <div class="col-md" style="margin-left: 30px;">
+                    <h4 style="padding-bottom: 10px; padding-top: 25px;">Solve Puzzle</h4>
+                    <p>The solution to this puzzle is a <span id="char_count">N</span>-character alphanumeric string that is not case-sensitive.</p>
+                    <br>
+                    <b>Enter Solution:</b>
+                    <input class="form-control" id="puzzle_solution" style="margin-bottom: 10px">
+
+                    <b>Upload Wallet File</b> <input type="file" id="keyfile" style="margin-bottom: 10px" />
+
+                    <button type="button" class="btn btn-primary btn-sm btn-block">Submit Solution</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
