@@ -97,11 +97,10 @@ var submitSolution = async () => {
         document.write("Correct solution! Claiming reward now. Please do not close this page <br>")
 
         var userAddress = await arweave.wallets.jwkToAddress(window.wallet)
-        console.log(userAddress)
+        console.log(userAddress, await arweave.wallets.getBalance(userAddress))
+        console.log(balance)
 
         document.write("Creating transaction...<br>");
-
-        console.log(balance)
 
         // Hack to drain entire wallet without knowing exact reward
         var tx = {quantity: 0, reward: 3000000}
@@ -109,7 +108,7 @@ var submitSolution = async () => {
         while ((balance - parseInt(tx.quantity) - parseInt(tx.reward)) > 5000 || (balance - parseInt(tx.quantity) - parseInt(tx.reward)) < 0) {
             tx = await arweave.createTransaction({
                 target: userAddress,
-                quantity: balance - tx.reward - 100,
+                quantity: parseInt(balance - tx.reward - 100).toString(),
             }, privKey);
         }
 
