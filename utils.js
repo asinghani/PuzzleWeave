@@ -1,4 +1,6 @@
 
+window.PUZZLEWEAVE = "PuzzleWeave";
+
 window.PUZZLE_VERSION = 4; // Version for newly created puzzles
 
 window.EARLIEST_VERSION = 4; // Only allow puzzles with version greater or equal to EARLIEST_VERSION

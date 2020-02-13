@@ -68,7 +68,7 @@ var submitPuzzle = async () => {
         data: btoa(details) + "||" + solutionHash + "||" + encryptedKey
     }, window.wallet);
 
-    txn.addTag("PuzzleWeave", "PuzzleWeave");
+    txn.addTag("PuzzleWeave", window.PUZZLEWEAVE);
     txn.addTag("Version", window.PUZZLE_VERSION.toString());
 
     txn.addTag("Timestamp", Math.round(new Date().getTime() / 1000).toString());

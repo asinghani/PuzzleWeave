@@ -10,7 +10,7 @@ function generateTableRow(title, reward, timestamp, id) {
 }
 
 var startFunc = async () => {
-    var txids = await arweave.arql({op: "equals", expr1: "PuzzleWeave", expr2: "PuzzleWeave"})
+    var txids = await arweave.arql({op: "equals", expr1: "PuzzleWeave", expr2: window.PUZZLEWEAVE})
     var txns = await Promise.all(txids.map((id) => { return arweave.transactions.get(id); }))
 
     txns = txns.filter((txn) => { return parseInt(decodeTags(txn)["Version"]) >= window.EARLIEST_VERSION; })
